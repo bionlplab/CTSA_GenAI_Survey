@@ -1,0 +1,262 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<style>
+    .sidebar {
+        position: -webkit-sticky;
+        position: sticky;
+        top: 0; 
+        height: 100vh; 
+        overflow-y: auto;
+        
+    }
+    
+</style>
+
+<body>
+    <header class="container">
+        <h3 class="my-4 text-center",style="background-color: #f8f9fa">Environment Scan of Generative AI Infrastructure for Clinical and Translational Science</h3>
+    </header>
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Sidebar -->
+            <div class="col-md-5 col-lg-2 d-md-block bg-light sidebar collapse">
+                <div class="position-sticky pt-3">
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#!" onclick="scrollToElement('introduction')">Introduction</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#!" onclick="scrollToElement('q2')">Which stakeholder groups are involved in decision-making and implementation of GenAI?</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#!" onclick="scrollToElement('q3')">Who leads the decision-making process for implementing GenAI applications?</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#!" onclick="scrollToElement('q4')">How are decisions regarding adopting GenAI made in your healthcare system?</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#!" onclick="scrollToElement('q5')">Are there any formal committees or task forces established to oversee the deployment and governance of Generative AI in your organization?</a>
+                        </li>
+                        <!-- Add more links as needed Q5 is lack-->
+                        <li class="nav-item">
+                            <a class="nav-link" href="#!" onclick="scrollToElement('q7')">Do you have an ethicist or an ethics committee involved in the decision-making process for implementing GenAI technologies?</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#!" onclick="scrollToElement('q9')">What is the stage of GenAI adoption?</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#!" onclick="scrollToElement('q10')">How well do GenAI applications integrate with your existing systems and workflows?</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#!" onclick="scrollToElement('q11')">How familiar are members of the workforce with the use of LLMs?</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#!" onclick="scrollToElement('q13')">How desirable is it for the workforce to receive further LLM training?</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#!" onclick="scrollToElement('q15')">Have funds been allocated for GenAI projects?</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#!" onclick="scrollToElement('q16')">Compared to 2021, how does the budget allocated to GenAI projects change?</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#!" onclick="scrollToElement('q17')">Which of the following types of LLM are your organization currently using?</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#!" onclick="scrollToElement('q18')">What AI deployment options does your organization currently use?</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#!" onclick="scrollToElement('q19')">What factors influenced your decision to develop open or proprietary LLMs solutions?</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#!" onclick="scrollToElement('q21')">Which of the following use cases are you currently using LLMs for?</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#!" onclick="scrollToElement('q25')">The importance of each of the following criteria when evaluating LLMs?</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#!" onclick="scrollToElement('q26')">How significant the following potential limitations or roadblocks are to your roadmap for current generative AI technology?</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#!" onclick="scrollToElement('q22')">How much you think LLMs will impact each use case over the next 2-3 years</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#!" onclick="scrollToElement('q23')">What improvements, if any, have you observed since implementing GenAI solutions in your healthcare system?</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#!" onclick="scrollToElement('q24')">What drawbacks or negative impacts, if any, have you observed since implementing GenAI solutions?</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#!" onclick="scrollToElement('q27')">Which steps do you take to test and improve your LLM models?</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#!" onclick="scrollToElement('q28')">What type(s) of evaluations have your deployed LLM solutions undergone?</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#!" onclick="scrollToElement('q29')">What challenges, if any, have you faced in integrating GenAI with existing systems?</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#!" onclick="scrollToElement('acknowledgement')">Acknowledgement</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#!" onclick="scrollToElement('author')">Author List</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Main content -->
+            <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+                <div class="pt-3 pb-2 mb-3">
+                    <div id="introduction">
+                        <h4>Introduction</h4>
+                        <p>This study reports a comprehensive environmental scan of the generative AI (GenAI) infrastructure in the national network for clinical and translational science across 36 institutions supported by the Clinical and Translational Science Award (CTSA) Program led by the National Center for Advancing Translational Sciences (NCATS) of the National Institutes of Health (NIH) at the United States. With the rapid advancement of GenAI technologies, including large language models (LLMs), healthcare institutions face unprecedented opportunities and challenges. This research explores the current status of GenAI integration, focusing on stakeholder roles, governance structures, and ethical considerations by administering a survey among leaders of health institutions (i.e., representing academic medical centers and health systems) to assess the institutional readiness and approach towards GenAI adoption. Key findings indicate a diverse range of institutional strategies, with most organizations in the experimental phase of GenAI deployment. The study highlights significant variations in governance models, with a strong preference for centralized decision-making but notable gaps in workforce training and ethical oversight. Moreover, the results underscore the need for a more coordinated approach to GenAI governance, emphasizing collaboration among senior leaders, clinicians, information technology staff, and researchers. Our analysis also reveals concerns regarding GenAI bias, data security, and stakeholder trust, which must be addressed to ensure the ethical and effective implementation of GenAI technologies. This study offers valuable insights into the challenges and opportunities of GenAI integration in healthcare, providing a roadmap for institutions aiming to leverage GenAI for improved quality of care and operational efficiency. </p>
+                    </div>
+                    <div id="q2">
+                        <h4></h4>
+                        <!--<embed src="../CTSA_single_figures_pdf/q2.pdf" type="application/pdf" width="100%" height="500px" />-->
+                        <img src="CTSA_single_figures/q2.png" alt="Which stakeholder groups are involved in decision-making and implementation of GenAI?">
+                        <p>&nbsp;</p>
+                    </div>
+                    <div id="q3">
+                        <h4></h4>
+                        <img src="CTSA_single_figures/q3.png" alt="Who leads the decision-making process for implementing GenAI applications?">
+                        <p>&nbsp;</p>
+                    </div>
+                    <div id="q4">
+                        <h4></h4>
+                        <img src="CTSA_single_figures/q4.png" alt="How are decisions regarding adopting GenAI made in your healthcare system?">
+                        <p>&nbsp;</p>
+                    </div>
+                    <div id="q5">
+                        <h5>Are there any formal committees or task forces established to oversee the deployment and governance of Generative AI in your organization?</h5>
+                        <img src="CTSA_single_figures/q5.png" alt="Are there any formal committees or task forces established to oversee the deployment and governance of Generative AI in your organization?">
+                        <p>&nbsp;</p>
+                    </div>
+                    
+                    <!--We need a pie chart for Question 5-->
+                    <div id="q7">
+                        <h4></h4>
+                        <img src="CTSA_single_figures/q7.png" alt="Do you have an ethicist or an ethics committee involved in the decision-making process for implementing GenAI technologies?">
+                        <p>&nbsp;</p>
+                    </div>
+                    <div id="q9">
+                        <h4></h4>
+                        <img src="CTSA_single_figures/q9.png" alt="What is the stage of GenAI adoption?">
+                        <p>&nbsp;</p>
+                    </div>
+                    <div id="q10">
+                        <h4></h4>
+                        <img src="CTSA_single_figures/q10.png" alt="How well do GenAI applications integrate with your existing systems and workflows?">
+                        <p>&nbsp;</p>
+                    </div>
+                    <div id="q11">
+                        <h4></h4>
+                        <img src="CTSA_single_figures/q11.png" alt="How familiar are members of the workforce with the use of LLMs?">
+                        <p>&nbsp;</p>
+                    </div>
+                    <div id="q13">
+                        <h4></h4>
+                        <img src="CTSA_single_figures/q13.png" alt="How desirable is it for the workforce to receive further LLM training?">
+                        <p>&nbsp;</p>
+                    </div>
+                    <div id="q15">
+                        <h4></h4>
+                        <img src="CTSA_single_figures/q15.png" alt="Have funds been allocated for GenAI projects?">
+                        <p>&nbsp;</p>
+                    </div>
+                    <div id="q16">
+                        <h4></h4>
+                        <img src="CTSA_single_figures/q16.png" alt="Compared to 2021, how does the budget allocated to GenAI projects change?">
+                        <p>&nbsp;</p>
+                    </div>
+                    <div id="q17">
+                        <h4></h4>
+                        <img src="CTSA_single_figures/q17.png" alt="Which of the following types of LLM are your organization currently using?">
+                        <p>&nbsp;</p>
+                    </div>
+                    <div id="q18">
+                        <h4></h4>
+                        <img src="CTSA_single_figures/q18.png" alt="What AI deployment options does your organization currently use?">
+                        <p>&nbsp;</p>
+                    </div>
+                    <div id="q19">
+                        <h4></h4>
+                        <img src="CTSA_single_figures/q19.png" alt="What factors influenced your decision to develop open or proprietary LLMs solutions?">
+                        <p>&nbsp;</p>
+                    </div>
+                    <div id="q21">
+                        <h4></h4>
+                        <img src="CTSA_single_figures/q21.png" alt="Which of the following use cases are you currently using LLMs for?">
+                        <p>&nbsp;</p>
+                    </div>
+                    <div id="q25">
+                        <h4></h4>
+                        <img src="CTSA_single_figures/q25.png" alt="The importance of each of the following criteria when evaluating LLMs?">
+                        <p>&nbsp;</p>
+                    </div>
+                    <div id="q26">
+                        <h4></h4>
+                        <img src="CTSA_single_figures/q26.png" alt="How significant the following potential limitations or roadblocks are to your roadmap for current generative AI technology?">
+                        <p>&nbsp;</p>
+                    </div>
+                    <div id="q22">
+                        <h4></h4>
+                        <img src="CTSA_single_figures/q22.png" alt="How much you think LLMs will impact each use case over the next 2-3 years">
+                        <p>&nbsp;</p>
+                    </div>
+                    <div id="q23">
+                        <h4></h4>
+                        <img src="CTSA_single_figures/q23.png" alt="What improvements, if any, have you observed since implementing GenAI solutions in your healthcare system?">
+                        <p>&nbsp;</p>
+                    </div>
+                    <div id="q24">
+                        <h4></h4>
+                        <img src="CTSA_single_figures/q24.png" alt="What drawbacks or negative impacts, if any, have you observed since implementing GenAI solutions?">
+                        <p>&nbsp;</p>
+                    </div>
+                    <div id="q27">
+                        <h4></h4>
+                        <img src="CTSA_single_figures/q27.png" alt="Which steps do you take to test and improve your LLM models?">
+                        <p>&nbsp;</p>
+                    </div>
+                    <div id="q28">
+                        <h4></h4>
+                        <img src="CTSA_single_figures/q28.png" alt="What type(s) of evaluations have your deployed LLM solutions undergone?">
+                        <p>&nbsp;</p>
+                    </div>
+                    <div id="q29">
+                        <h4></h4>
+                        <img src="CTSA_single_figures/q29.png" alt="What challenges, if any, have you faced in integrating GenAI with existing systems?">
+                        <p>&nbsp;</p>
+                    </div>
+                    <div id="acknowledgement">
+                        <h4>Acknowledgement</h4>
+                        <p>This work was supported by the National Center for Advancing Translational Sciences (NCATS) of the National Institutes of Health (NIH) under grant numbers UL1TR002384, UM1TR004789, UL1TR001412, UL1TR001449, ULTR002345, UM1TR004404, UL1TR001866, UM1TR004909, and UL1TR001873; National Library of Medicine (NLM) of NIH under grant numbers T15LM007079, T15LM012495, R25LM014213; and the National Institute on Alcohol Abuse and Alcoholism of NIH grant numbers R21AA026954 and R33AA0226954. This study was also funded in part by the Department of Veterans Affairs and NIH Intramural Research Program. The content is solely the responsibility of the authors and does not necessarily represent the official views of the NIH.</p>
+                    </div>
+                    <div id="author">
+                        <h4>Author List</h4>
+                        <h7 class="my-2">Betina Idnay, Zihan Xu, William G. Adams, Mohammad Adibuzzaman, Nicholas R. Anderson, Neil Bahroos, Douglas S. Bell, Cody Bumgardner, Thomas Campion, Mario Castro, James J. Cimino, I. Glenn Cohen, David Dorr, Peter L Elkin, Jungwei W. Fan, Todd Ferris, David J. Foran, David, Hanauer, Mike Hogarth, Kun Huang, Jayashree Kalpathy-Cramer, Manoj Kandpal, Niranjan S. Karnik, Avnish Katoch, Albert M. Lai, Christophe G. Lambert, Lang Li, Christopher Lindsell, Jinze Liu, Zhiyong Lu, Yuan Luo, Peter McGarvey, Eneida A. Mendonca, Parsa Mirhaji, Shawn Murphy, John D. Osborne, Ioannis C. Paschalidis, Paul A. Harris, Fred Prior, Nicholas J. Shaheen, Nawar Shara, Ida Sim, Umberto Tachinardi, Lemuel R. Waitman, Rosalind J. Wright, Adrian H. Zai, Kai Zheng, Sandra Soo-Jin Lee, Bradley A. Malin, Karthik Natarajan, W. Nicholson Price II, Rui Zhang, Yiye Zhang, Hua Xu, Jiang Bian, Chunhua Weng, and Yifan Peng</h7>
+                    </div>
+                    
+                    <!-- Add more sections as needed -->
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script>
+        function scrollToElement(elementId) {
+            const element = document.getElementById(elementId);
+            element.scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
